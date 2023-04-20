@@ -79,15 +79,23 @@ walker find_coming_birthday {
 }
 
 walker calculate_bmi {
-    // Calculate BMI based on height and weight
+    // calculates BMI for all family members
+    has max_return = 5;
+    has anchor bmi_order = [];
+
     root: take-->node::family_root;
     family_root: take-->node::person;
     person {
-        here::get_height;
-        here::get_weight;
-        here::get_name;
-        here.bmi = here.weight / (here.height * here.height);
-        std.out("BMI for " + here.name + " is: " + here.bmi);
-        report here.bmi;
+        if (!here.deceased) {
+            here::get_age;
+            here::get_bmi;
+            bmi_order.l::append([here.bmi, here.age, here.name]);
+        }
+    }
+    with exit {
+        bmi_order = std.sort_by_col(bmi_order, 0);
+        bmi_order = bmi_order[0:max_return];
+        std.out(bmi_order);
+        report bmi_order;
     }
 }

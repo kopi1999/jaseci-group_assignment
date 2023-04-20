@@ -24,6 +24,17 @@ node person {
     has get_height;
     has get_name;
 
+    has bmi {
+        calculate {
+            if (here.weight <= 0 or here.height <= 0) {
+                return null;
+            }
+            let height_in_meters = here.height / 100;
+            let bmi = here.weight / (height_in_meters * height_in_meters);
+            return bmi;
+        }
+    }
+
     can get_age {
         today_date = date.date_now();
         difference = date.date_day_diff(start_date=date_of_birth, end_date=today_date);
@@ -42,28 +53,6 @@ node person {
         days_to_birthday = difference;
     }
 
-    can get_weight {
-        // return person's weight
-        return here.weight;
-    }
-
-    can get_height {
-        // return person's height
-        return here.height;
-    }
-
-    can get_name {
-        // return person's height
-        return here.name;
-    }
-    // can calculate_bmi {
-    //     // calculate BMI for the person
-    //     weight = here.get_weight();
-    //     height = here.get_height();
-    //     bmi = weight / (height * height);
-    //     std.out("BMI for " + here.name + " is: " + here.bmi);
-    //     report bmi;
-    // }
 }
 node family_root {
     has id;
