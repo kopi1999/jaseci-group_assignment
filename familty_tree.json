@@ -24,7 +24,10 @@
             "deceased": false,
             "children": [],
             "spouse": null,
-            "gender": "Male"
+            "gender": "Male",
+            "weight": "80",
+            "height": "170"
+            
         },
         {
             "uid": "0x2",
@@ -40,7 +43,9 @@
                 "0x5"
             ],
             "spouse": "0x3",
-            "gender": "Male"
+            "gender": "Male",
+            "weight": "70",
+            "height": "165"
         },
         {
             "uid": "0x3",
@@ -56,7 +61,9 @@
                 "0x5"
             ],
             "spouse": null,
-            "gender": "Female"
+            "gender": "Female",
+            "weight": "50",
+            "height": "160"
         },
         {
             "uid": "0x4",
@@ -71,7 +78,9 @@
             "deceased": false,
             "children": [],
             "spouse": null,
-            "gender": "Female"
+            "gender": "Female",
+            "weight": "60",
+            "height": "168"
         },
         {
             "uid": "0x5",
@@ -86,7 +95,9 @@
             "deceased": false,
             "children": [],
             "spouse": null,
-            "gender": "Male"
+            "gender": "Male",
+            "weight": "75",
+            "height": "175"
         }
     ]
 }

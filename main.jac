@@ -75,4 +75,19 @@ walker find_coming_birthday {
         std.out(birthday_order);
         report birthday_order;
     }
+
+}
+
+walker calculate_bmi {
+    // Calculate BMI based on height and weight
+    root: take-->node::family_root;
+    family_root: take-->node::person;
+    person {
+        here::get_height;
+        here::get_weight;
+        here::get_name;
+        here.bmi = here.weight / (here.height * here.height);
+        std.out("BMI for " + here.name + " is: " + here.bmi);
+        report here.bmi;
+    }
 }
