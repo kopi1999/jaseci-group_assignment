@@ -24,7 +24,7 @@ node person {
     has get_height;
     has get_name;
 
-has bmi {
+    has bmi {
         calculate {
             if (here.weight <= 0 or here.height <= 0) {
                 return null;
