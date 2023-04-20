@@ -79,7 +79,7 @@ walker find_coming_birthday {
 }
 
 walker calculate_bmi {
-    // calculates BMI for all family members
+    // calculates BMI for all family members. 
     has max_return = 5;
     has anchor bmi_order = [];
 
