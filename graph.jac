@@ -5,7 +5,7 @@ edge member;
 
 // Nodes
 node person {
-    has id;
+    has uid;
     has family_id;
     has name;
     has date_of_birth;
@@ -15,9 +15,14 @@ node person {
     has parents;
     has children;
     has spouse;
+    has weight;
+    has height;
 
     has age;
     has days_to_birthday;
+    has get_weight;
+    has get_height;
+    has get_name;
 
     can get_age {
         today_date = date.date_now();
@@ -36,6 +41,29 @@ node person {
         if (difference < 0) : difference = difference + 365;
         days_to_birthday = difference;
     }
+
+    can get_weight {
+        // return person's weight
+        return here.weight;
+    }
+
+    can get_height {
+        // return person's height
+        return here.height;
+    }
+
+    can get_name {
+        // return person's height
+        return here.name;
+    }
+    // can calculate_bmi {
+    //     // calculate BMI for the person
+    //     weight = here.get_weight();
+    //     height = here.get_height();
+    //     bmi = weight / (height * height);
+    //     std.out("BMI for " + here.name + " is: " + here.bmi);
+    //     report bmi;
+    // }
 }
 node family_root {
     has id;
