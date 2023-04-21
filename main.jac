@@ -2,7 +2,7 @@ import {*} with "./graph.jac";
 
 walker create_familytree {
     // creates a familytree from a json file
-    has data_file = "family_tree.json";
+    has data_file = "familytree.json";
     has famly_members = [];
 
     root {
@@ -36,7 +36,8 @@ walker create_familytree {
                 deceased = member["deceased"],
                 parents = member["parents"],
                 children = member["children"],
-                spouse = member["spouse"]
+                spouse = member["spouse"],
+                hobbies = member["hobbies"]
             );
             famly_members.list::append(family_member);
         }
@@ -74,5 +75,25 @@ walker find_coming_birthday {
         birthday_order = birthday_order[0:max_return];
         std.out(birthday_order);
         report birthday_order;
+    }
+}
+
+walker each_hobby_and_persons {
+    has max_return = 5;
+    has anchor hobbies_dict = {};
+
+    root: take-->node::family_root;
+    family_root: take-->node::person;
+    person {
+        for hobby in here.hobbies {
+            if (hobby not in hobbies_dict) {
+                hobbies_dict[hobby] = [];
+            }
+            hobbies_dict[hobby].list::append(here.name);
+        }
+    }
+    with exit {
+        std.out(hobbies_dict);
+        report hobbies_dict;
     }
 }
