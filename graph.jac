@@ -23,6 +23,7 @@ node person {
     has get_weight;
     has get_height;
     has get_name;
+    has sports;
 
     has bmi {
         calculate {

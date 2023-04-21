@@ -36,7 +36,8 @@ walker create_familytree {
                 deceased = member["deceased"],
                 parents = member["parents"],
                 children = member["children"],
-                spouse = member["spouse"]
+                spouse = member["spouse"],
+                sports = member["sports"]
             );
             famly_members.list::append(family_member);
         }
@@ -76,6 +77,25 @@ walker find_coming_birthday {
         report birthday_order;
     }
 
+}
+walker find_similar_sport_interests {
+        has max_return = 5;
+        has anchor sports_dict = {};
+        
+        root: take-->node::family_root;
+        family_root: take-->node::person;
+        person {
+            for sports in here.hobbies {
+                if (sports not in sports_dict) {
+                    sports_dict[sports] = [];
+                }
+                sports_dict[sports].list::append(here.name);
+            }
+        }
+        with exit {
+            std.out(sports_dict);
+            report sports_dict;
+        }
 }
 
 walker calculate_bmi {
