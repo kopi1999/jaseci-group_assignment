@@ -24,9 +24,7 @@ node person {
     has BMI; 
 
    
-    can get_BMI{
-        BMI = weight/((height/100)^2);
-    }
+    
 
     can get_age {
         today_date = date.date_now();
@@ -44,6 +42,9 @@ node person {
         difference = date.date_day_diff(start_date=today_date, end_date=birthday);
         if (difference < 0) : difference = difference + 365;
         days_to_birthday = difference;
+    }
+    can get_BMI{
+        BMI = weight/((height/100)^2);
     }
 }
 node family_root {
