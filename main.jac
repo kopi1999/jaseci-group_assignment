@@ -38,7 +38,8 @@ walker create_familytree {
                 children = member["children"],
                 spouse = member["spouse"],
                 height = member["height"],
-                weight = member["weight"]
+                weight = member["weight"],
+                hobbies = member["hobbies"]
 
             );
             famly_members.list::append(family_member);
@@ -110,4 +111,23 @@ walker find_BMI {
         }
 }
 
+walker each_hobby_and_persons {
+    has max_return = 5;
+    has anchor hobbies_dict = {};
+
+    root: take-->node::family_root;
+    family_root: take-->node::person;
+    person {
+        for hobby in here.hobbies {
+            if (hobby not in hobbies_dict) {
+                hobbies_dict[hobby] = [];
+            }
+            hobbies_dict[hobby].list::append(here.name);
+        }
+    }
+    with exit {
+        std.out(hobbies_dict);
+        report hobbies_dict;
+    }
+}
 

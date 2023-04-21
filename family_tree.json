@@ -26,7 +26,8 @@
             "spouse": null,
             "gender": "Male",
             "weight": 80,
-            "height": 170
+            "height": 170,
+            "hobbies": ["reading", "movies", "hiking","swimming","stamps"]
             
         },
         {
@@ -45,7 +46,8 @@
             "spouse": "0x3",
             "gender": "Male",
             "weight": 70,
-            "height": 165
+            "height": 165,
+            "hobbies": ["reading", "stamps", "surfing","photography"]
         },
         {
             "uid": "0x3",
@@ -63,7 +65,8 @@
             "spouse": null,
             "gender": "Female",
             "weight": 50,
-            "height": 160
+            "height": 160,
+            "hobbies": ["reading", "surfing","cooking"]
         },
         {
             "uid": "0x4",
@@ -80,7 +83,8 @@
             "spouse": null,
             "gender": "Female",
             "weight": 60,
-            "height": 168
+            "height": 168,
+            "hobbies": ["reading", "stamps","swimming", "surfing","photography"]
         },
         {
             "uid": "0x5",
@@ -97,7 +101,8 @@
             "spouse": null,
             "gender": "Male",
             "weight": 75,
-            "height": 175
+            "height": 175,
+            "hobbies": ["hiking", "photography", "movies"]
         }
     ]
 }
