@@ -1,0 +1,14 @@
+2023-04-21 09:38:22,106 - ERROR - start: Skipping RedisService due to initialization failure!
+ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+2023-04-21 09:39:32,197 - ERROR - start: Skipping RedisService due to initialization failure!
+ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+2023-04-21 09:40:19,044 - ERROR - jac_code_to_ast: Parse errors encountered - <jaseci.jac.ir.ast_builder.JacAstBuilder object at 0x7f32006f7460>
+2023-04-21 09:40:19,055 - ERROR - jac_code_to_ast: Parse errors encountered - <jaseci.jac.ir.ast_builder.JacAstBuilder object at 0x7f32009796c0>
+2023-04-21 09:40:19,055 - ERROR - compile_jac: main.jac: Invalid syntax in Jac code!
+2023-04-21 09:40:19,056 - ERROR - compile_jac: graph.jac: line 27:12 - unparsed:graph.jac:0:0: - mismatched input '{' expecting {';', ','}
+2023-04-21 09:40:19,056 - ERROR - compile_jac: graph.jac: line 32:12 - unparsed:graph.jac:0:0: - extraneous input 'let' expecting {<EOF>, 'type', 'graph', 'node', 'edge', 'walker', 'async', 'test', 'global'}
+2023-04-21 09:40:19,056 - ERROR - register: main.jac: Code not registered
+2023-04-21 09:41:59,228 - INFO - proc_request: Incoming call from [32mn.kopisankar@gmail.com[m:urn:uuid:caf41164-f9cf-4abd-8bb5-9b6fcc2ff091 to [32msentinel_register[m with {'set_active': True, 'mode': 'ir', 'code': '{"gram_hash": "dd880c56f0150d356a7208bbac4facf6", "ir": {"name": "start", "kid": [{"name": "element", "kid": [{"name": "architype", "kid": [{"name": "KW_EDGE", "kid": [], "loc": [2, 0, "graph.jac", {"token": {"sy via python-requests/2.28.2
+2023-04-21 09:41:59,257 - INFO - log_request_stats: API call from [32mn.kopisankar@gmail.com[m:urn:uuid:caf41164-f9cf-4abd-8bb5-9b6fcc2ff091 to [32msentinel_register[m completed in [33m0.028 seconds[m touched [33m19[m mem / [33m0[m redis / [33m1[m db  ([33m0.6kb[m) and saving [33m18[m objects. Response: [{'version': None, 'name': 'main.jir', 'kind': 'generic', 'jid': 'urn:uuid:e7a7d1a9-095f-4564-a779-def8472c062d', 'j_timestamp': '2023-04-21T09:41:59.229828', 'j_type': 'sentinel', 'code_sig': '078751aedfe343c5a64c504b107491ec'}, {'name': 'root', 'kind': '.
+2023-04-21 09:46:51,474 - INFO - proc_request: Incoming call from [32mn.kopisankar@gmail.com[m:urn:uuid:caf41164-f9cf-4abd-8bb5-9b6fcc2ff091 to [32mwalker_run[m with {'name': 'find_coming_birthday', 'output': '', 'is_async': None, 'profiling': False, 'snt': None, '_req_ctx': '{}', 'ctx': '{}', 'nd': None} via python-requests/2.28.2
+2023-04-21 09:46:51,547 - INFO - log_request_stats: API call from [32mn.kopisankar@gmail.com[m:urn:uuid:caf41164-f9cf-4abd-8bb5-9b6fcc2ff091 to [32mwalker_run[m completed in [33m0.073 seconds[m touched [33m15[m mem / [33m0[m redis / [33m14[m db  ([33m0.6kb[m) and saving [33m0[m objects. Response: {'success': True, 'report': [[]], 'final_node': 'urn:uuid:b71d5d3e-c0fe-47a7-b05f-a6fd4b45e32f', 'yielded': False}.
