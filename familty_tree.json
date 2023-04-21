@@ -26,8 +26,8 @@
             "spouse": null,
             "gender": "Male",
             "weight": "80",
-            "height": "170"
-            
+            "height": "170",
+            "sports": ["Cricket","Football","Chess"] 
         },
         {
             "uid": "0x2",
@@ -45,7 +45,8 @@
             "spouse": "0x3",
             "gender": "Male",
             "weight": "70",
-            "height": "165"
+            "height": "165",
+            "sports": ["Badminton","Chess"]
         },
         {
             "uid": "0x3",
@@ -63,7 +64,8 @@
             "spouse": null,
             "gender": "Female",
             "weight": "50",
-            "height": "160"
+            "height": "160",
+            "sports": ["Badminton","Netball","Carrom"]
         },
         {
             "uid": "0x4",
@@ -80,7 +82,8 @@
             "spouse": null,
             "gender": "Female",
             "weight": "60",
-            "height": "168"
+            "height": "168",
+            "sports": ["Esport","Chess","Cricket"]
         },
         {
             "uid": "0x5",
@@ -97,7 +100,8 @@
             "spouse": null,
             "gender": "Male",
             "weight": "75",
-            "height": "175"
+            "height": "175",
+            "sports": ["Football","Chess","Baseball"]
         }
     ]
 }
