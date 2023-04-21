@@ -1,5 +1,5 @@
 import {*} with "./graph.jac";
-
+//sentinel register main.jir -set_active true -mode ir
 walker create_familytree {
     // creates a familytree from a json file
     has data_file = "familytree.json";
