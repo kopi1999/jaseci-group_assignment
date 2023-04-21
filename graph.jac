@@ -18,6 +18,7 @@ node person {
     has weight;
     has height;
     has hobbies;
+    has education;
 
     has age;
     has days_to_birthday;

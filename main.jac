@@ -39,7 +39,8 @@ walker create_familytree {
                 spouse = member["spouse"],
                 height = member["height"],
                 weight = member["weight"],
-                hobbies = member["hobbies"]
+                hobbies = member["hobbies"],
+                education = member["education"]
 
             );
             famly_members.list::append(family_member);
@@ -131,3 +132,24 @@ walker each_hobby_and_persons {
     }
 }
 
+walker show_graguated {
+    // show whe are the graduated family members.  
+    has max_return = 5;
+    has anchor graduated_dict = {};
+
+    root: take-->node::family_root;
+    family_root: take-->node::person;
+    
+    person {
+        for educations in here.education {
+            if (educations == "graduate") {
+                graduated_dict[educations] = [];
+            }
+            greduated_dict[educations].list::append(here.name);
+        }
+    }
+    with exit {
+        std.out(graduated_dict);
+        report graduated_dict;
+    }
+}
