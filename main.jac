@@ -40,7 +40,8 @@ walker create_familytree {
                 height = member["height"],
                 weight = member["weight"],
                 hobbies = member["hobbies"],
-                education = member["education"]
+                education = member["education"],
+                status = member["status"]
 
             );
             famly_members.list::append(family_member);
@@ -151,5 +152,19 @@ walker show_graguated {
     with exit {
         std.out(graduated_dict);
         report graduated_dict;
+    }
+}
+
+walker married_lists{
+    has anchor married_list=[];
+    root: take-->node::family_root;
+    family_root: take-->node::person;
+    person {
+        if (here.status=="married"){
+        married_list.list::append(here.name);}
+
+    }
+    with exit{
+        report married_list;
     }
 }

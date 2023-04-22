@@ -23,7 +23,8 @@ node person {
     has age;
     has days_to_birthday;
     
-    has BMI; 
+    has BMI;
+    has status; 
 
    
     
