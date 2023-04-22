@@ -28,7 +28,8 @@
             "weight": 80,
             "height": 170,
             "hobbies": ["reading", "movies", "hiking","swimming","stamps"],
-            "education" : "graduate"
+            "education" : "graduate",
+            "status" : "married"
             
         },
         {
@@ -49,7 +50,8 @@
             "weight": 70,
             "height": 165,
             "hobbies": ["reading", "stamps", "surfing","photography"],
-            "education" : "graduate"
+            "education" : "graduate",
+            "status" : "married"
         },
         {
             "uid": "0x3",
@@ -69,7 +71,8 @@
             "weight": 50,
             "height": 160,
             "hobbies": ["reading", "surfing","cooking"],
-            "education" : "A/L"
+            "education" : "A/L",
+            "status" : "single"
         },
         {
             "uid": "0x4",
@@ -88,7 +91,8 @@
             "weight": 60,
             "height": 168,
             "hobbies": ["reading", "stamps","swimming", "surfing","photography"],
-            "education" : "graduate"
+            "education" : "graduate",
+            "status" : "single"
         },
         {
             "uid": "0x5",
@@ -107,7 +111,8 @@
             "weight": 75,
             "height": 175,
             "hobbies": ["hiking", "photography", "movies"],
-            "education" : "A/L"
+            "education" : "A/L",
+            "status" : "single"
         }
     ]
 }
