@@ -29,8 +29,9 @@
             "height": 170,
             "hobbies": ["reading", "movies", "hiking","swimming","stamps"],
             "education" : "graduate",
-            "status" : "married"
-            
+            "status" : "married",
+            "sports": ["Cricket","Football","Chess"] 
+
         },
         {
             "uid": "0x2",
@@ -51,7 +52,9 @@
             "height": 165,
             "hobbies": ["reading", "stamps", "surfing","photography"],
             "education" : "graduate",
-            "status" : "married"
+            "status" : "married",
+            "sports": ["Badminton","Chess"]
+
         },
         {
             "uid": "0x3",
@@ -72,7 +75,9 @@
             "height": 160,
             "hobbies": ["reading", "surfing","cooking"],
             "education" : "A/L",
-            "status" : "single"
+            "status" : "single",
+            "sports": ["Badminton","Netball","Carrom"]
+
         },
         {
             "uid": "0x4",
@@ -92,7 +97,9 @@
             "height": 168,
             "hobbies": ["reading", "stamps","swimming", "surfing","photography"],
             "education" : "graduate",
-            "status" : "single"
+            "status" : "single",
+            "sports": ["Esport","Chess","Cricket"]
+
         },
         {
             "uid": "0x5",
@@ -112,7 +119,9 @@
             "height": 175,
             "hobbies": ["hiking", "photography", "movies"],
             "education" : "A/L",
-            "status" : "single"
+            "status" : "single",
+            "sports": ["Football","Chess","Baseball"]
+
         }
     ]
 }
