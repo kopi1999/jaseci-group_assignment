@@ -19,15 +19,11 @@ node person {
     has height;
     has hobbies;
     has education;
-
     has age;
     has days_to_birthday;
-    
     has BMI;
     has status; 
-
-   
-    
+    has sports;
 
     can get_age {
         today_date = date.date_now();
