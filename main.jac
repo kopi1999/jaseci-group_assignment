@@ -41,7 +41,9 @@ walker create_familytree {
                 weight = member["weight"],
                 hobbies = member["hobbies"],
                 education = member["education"],
-                status = member["status"]
+                status = member["status"],
+                sports = member["sports"]
+
 
             );
             famly_members.list::append(family_member);
