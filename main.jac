@@ -154,7 +154,25 @@ walker show_graguated {
         report graduated_dict;
     }
 }
-
+walker find_similar_sport_interests {
+        has max_return = 5;
+        has anchor sports_dict = {};
+        
+        root: take-->node::family_root;
+        family_root: take-->node::person;
+        person {
+            for sports in here.hobbies {
+                if (sports not in sports_dict) {
+                    sports_dict[sports] = [];
+                }
+                sports_dict[sports].list::append(here.name);
+            }
+        }
+        with exit {
+            std.out(sports_dict);
+            report sports_dict;
+        }
+}
 walker married_lists{
     has anchor married_list=[];
     root: take-->node::family_root;
